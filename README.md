@@ -34,4 +34,4 @@ Clique no nome do projeto para ver a **documentação completa com topologia vis
 
 1. **Clone o repositório ou baixe os arquivos:**
    ```bash
-   git clone [https://github.com/wesley-clemente/projetos-eve-ng.git](https://github.com/wesley-clemente/projetos-eve-ng.git)
+   git clone [https://github.com/wesley-clemente/projetos-eve-ng.git]
