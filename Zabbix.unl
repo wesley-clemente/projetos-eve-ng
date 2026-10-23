@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lab name="Zabbix" version="1" scripttimeout="300" lock="0" author="wes">
+  <description>PROJETO: MONITORAMENTO DE INFRAESTRUTURA COM ZABBIX E SNMP
+OBJETIVO:
+Implementação do Zabbix Appliance 7.0 para coleta de métricas e 
+monitoramento de ativos via SNMPv2c/SNMPv3 em ambiente simulado.
+
+TECNOLOGIAS E SERVIÇOS:
+- Zabbix Server / Web Appliance 7.0
+- Agente de Monitoramento SNMP (Simple Network Management Protocol)
+- Coleta de Cores: CPU, Memória, Disco, Interfaces de Rede e Uptime
+- Dashboards Personalizados e Gestão de Triggers/Alertas
+
+COMPONENTES DA TOPOLOGIA:
+- Zabbix Appliance (Server/Web): IP 10.1.10.188
+- Cliente Linux (Agente SNMPd): IP 10.1.10.102 (Porta UDP 161)
+
+STATUS: Coleta SNMP ativa e operacional (Availability SNMP: Green).</description>
+  <topology>
+    <nodes>
+      <node id="1" name="Zabbix" type="qemu" template="linux" image="linux-zabbix" console="vnc" cpu="2" cpulimit="0" ram="2048" ethernet="1" uuid="0f6bd496-790c-44b4-9f9f-feced87bfe39" firstmac="00:50:00:00:01:00" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="Server-2D-Linux-S.svg" config="0" left="1062" top="393">
+        <interface id="0" name="e0" type="ethernet" network_id="1"/>
+      </node>
+      <node id="2" name="Linux" type="qemu" template="linux" image="linux-zabbix" console="vnc" cpu="2" cpulimit="0" ram="2048" ethernet="1" uuid="23d87e77-9b28-4ef4-88f9-380855cc1bf1" firstmac="00:50:00:00:02:00" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="Server-2D-Linux-S.svg" config="0" left="1248" top="393">
+        <interface id="0" name="e0" type="ethernet" network_id="2"/>
+      </node>
+    </nodes>
+    <networks>
+      <network id="1" type="pnet0" name="Net" left="1056" top="168" visibility="1" icon="01-Cloud-Default.svg"/>
+      <network id="2" type="pnet0" name="Net" left="1245" top="177" visibility="1" icon="01-Cloud-Default.svg"/>
+    </networks>
+  </topology>
+</lab>
