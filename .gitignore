@@ -1,3 +1,4 @@
-*
 !*.unl
-!.gitignore
+!*.md
+!*.png
+!*.jpg
