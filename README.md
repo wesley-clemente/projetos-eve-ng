@@ -1,33 +1,37 @@
-# 🌐 Laboratórios e Topologias EVE-NG
+# 🌐 Laboratórios e Topologias de Redes — EVE-NG
 
-Bem-vindo ao meu repositório de laboratórios de redes e infraestrutura desenvolvidos no **EVE-NG**!
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-EVE--NG-orange?style=for-the-badge&logo=virtualbox" alt="EVE-NG Platform">
+  <img src="https://img.shields.io/badge/Network-MikroTik-blue?style=for-the-badge&logo=mikrotik" alt="MikroTik">
+  <img src="https://img.shields.io/badge/Monitoring-Zabbix_7.0-red?style=for-the-badge&logo=zabbix" alt="Zabbix">
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" alt="Status">
+</p>
 
----
-
-## 🛠️ Tecnologias e Ferramentas
-* **Plataforma:** EVE-NG
-* **Sistemas/Ativos:** Zabbix Appliance 7.0, Mikrotik Routers/Switches, Linux
-* **Protocolos:** SNMPv2c/SNMPv3, OSPF, VLANs, BGP
-
----
-
-## 📂 Projetos Disponíveis
-
-| Ficheiro | Descrição | Tecnologias Envolvidas |
-| :--- | :--- | :--- |
-| `Zabbix.unl` | Monitorização de infraestrutura com Zabbix Server e agentes SNMP. | Zabbix, SNMP, Linux |
-| `Rede Matriz.unl` | Topologia de rede corporativa com encaminhamento e VLANs. | Routing, Switching, EVE-NG |
+> Coleção de laboratórios e cenários práticos de infraestrutura de redes, monitoramento e roteamento dinâmico desenvolvidos e validados no **EVE-NG**.
 
 ---
 
-## 🚀 Como Utilizar os Ficheiros `.unl`
+## 🛠️ Tecnologias e Protocolos
 
-1. Faz o **download** do ficheiro `.unl` pretendido do repositório.
-2. Acede à interface web do teu **EVE-NG**.
-3. Clica em **Import** no menu do EVE-NG e seleciona o ficheiro descarregado.
-4. Inicia os nós e explora a topologia!
+- **Plataforma de Simulação:** EVE-NG
+- **Sistemas & Ativos:** Zabbix Server Appliance 7.0, MikroTik RouterOS v7, Linux (Debian/Ubuntu)
+- **Protocolos & Serviços:** OSPFv2, Inter-VLAN Routing (Bridge Filtering), DHCP Server, NAT/Masquerade, SNMPv2c/SNMPv3
 
 ---
 
-📫 **Contacto / Perfil:**  
-Desenvolvido por **[Wesley Clemente](https://github.com/wesley-clemente)**
+## 📂 Projetos em Destaque
+
+Clique no nome do projeto para ver a **documentação completa com topologia visual**:
+
+| Projeto | Descrição Resumida | Tecnologias Principais | Status |
+| :--- | :--- | :--- | :---: |
+| 📊 [**Zabbix & SNMP**](./Zabbix/) | Coleta de métricas e monitoramento de ativos Linux via agente SNMP. | Zabbix 7.0, SNMP, Linux | 🟢 Concluído |
+| 🏢 [**Rede Matriz & Filial**](./Rede%20Matriz/) | Interligação corporativa L2/L3 com segregação por VLANs e roteamento dinâmico. | MikroTik v7, OSPF, VLANs, NAT | 🟢 Concluído |
+
+---
+
+## 🚀 Como Utilizar estes Laboratórios
+
+1. **Clone o repositório ou baixe os arquivos:**
+   ```bash
+   git clone [https://github.com/wesley-clemente/projetos-eve-ng.git](https://github.com/wesley-clemente/projetos-eve-ng.git)
