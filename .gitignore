@@ -1,4 +1,5 @@
-!*.unl
-!*.md
-!*.png
-!*.jpg
+*.~lock*
+*.xlsx
+*.xls
+*~
+.gitignore~
