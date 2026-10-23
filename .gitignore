@@ -1,5 +1,6 @@
 *.~lock*
 *.xlsx
 *.xls
+*.doc*
 *~
 .gitignore~
