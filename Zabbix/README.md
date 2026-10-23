@@ -13,26 +13,34 @@
 Implementação do Zabbix Appliance 7.0 para recolha de métricas e monitorização de ativos via SNMPv2c/SNMPv3 em ambiente simulado no EVE-NG.
 
 ---
-
 ## 💻 Componentes e Endereçamento IP
 
-| Dispositivo | Função | IP / Interface | Protocolo |
-| :--- | :--- | :--- | :--- |
-| **Zabbix Server** | Servidor Web / Coletor | `10.1.10.188` | HTTP / SNMP |
-| **Cliente Linux** | Agente SNMP | `10.1.10.102` | SNMPd (UDP 161) |
+| Nó | Dispositivo / Função | Endereço IP | Interface | MAC Address | Recursos (vCPU / RAM) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Zabbix** | Server / Web Appliance 7.0 | `10.1.10.188` | `e0` (pnet0) | `00:50:00:00:01:00` | 2 vCPU / 2048 MB RAM |
+| **Linux** | Cliente Agente SNMPd | `10.1.10.102` | `e0` (pnet0) | `00:50:00:00:02:00` | 2 vCPU / 2048 MB RAM |
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
-* **Zabbix Appliance 7.0**
-* **Agente de Monitorização SNMP** (SNMPv2c/SNMPv3)
-* **Recolha de Métricas:** CPU, Memória, Disco, Interfaces de Rede e Uptime
-* **EVE-NG** (Ambiente de Simulação)
+## 🛠️ Tecnologias e Serviços
+* **Servidor:** Zabbix Server / Web Appliance 7.0
+* **Protocolo de Coleta:** SNMP (Simple Network Management Protocol - Porta UDP 161)
+* **Métricas Coletadas:**
+  * Uso e carga de **CPU**
+  * Consumo de **Memória** e **Disco**
+  * Tráfego e estatísticas de **Interfaces de Rede**
+  * Tempo de atividade do sistema (**Uptime**)
+* **Visualização:** Dashboards personalizados e gestão de Triggers/Alertas.
 
 ---
 
-## 📥 Como Importar no EVE-NG
-1. Descarrega o ficheiro `Zabbix.unl` desta pasta.
-2. Na interface do EVE-NG, clica em **Import**.
-3. Seleciona o ficheiro e inicia os nós no teu ambiente!
+## 🟢 Status do Projeto
+* **Availability SNMP:** `GREEN` (Coleta SNMP ativa e totalmente operacional).
 
+---
+
+## 📥 Como Importar este Laboratório
+1. Faça o download do arquivo `Zabbix.unl` localizado nesta pasta.
+2. Acesse a interface web do seu **EVE-NG**.
+3. Clique em **Import** e selecione o arquivo `.unl`.
+4. Ligue os nós `Zabbix` e `Linux` e verifique a conectividade de rede na interface `pnet0`.
