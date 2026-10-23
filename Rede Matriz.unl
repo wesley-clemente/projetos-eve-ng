@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <lab name="Zabbix" version="1" scripttimeout="300" lock="0" author="wes">
-  <description>PROJETO: MONITORAMENTO DE INFRAESTRUTURA COM ZABBIX E SNMP
-OBJETIVO:
-Implementação do Zabbix Appliance 7.0 para coleta de métricas e 
-monitoramento de ativos via SNMPv2c/SNMPv3 em ambiente simulado.
+  <description> PROJETO: Interligação Corporativa Matriz e Filial com MikroTik RouterOS v7
 
-TECNOLOGIAS E SERVIÇOS:
-- Zabbix Server / Web Appliance 7.0
-- Agente de Monitoramento SNMP (Simple Network Management Protocol)
-- Coleta de Cores: CPU, Memória, Disco, Interfaces de Rede e Uptime
-- Dashboards Personalizados e Gestão de Triggers/Alertas
+TECNOLOGIAS IMPLEMENTADAS:
+- Camada 2: Segregação por VLANs (TI - VLAN 10, Vendas - VLAN 20) via Bridge &amp; VLAN Filtering.
+- Camada 3: Subinterfaces de Gateway, Servidores DHCP Dinâmicos (DORA) e Inter-VLAN Routing.
+- Roteamento Dinâmico: OSPFv2 (Área 0 / Backbone) para anúncio automático de redes entre Matriz e Filial.
+- Acesso à Internet: Rota Default (0.0.0.0/0), NAT/Masquerade na borda da Matriz e propagação via OSPF (default-originate).
 
-COMPONENTES DA TOPOLOGIA:
-- Zabbix Appliance (Server/Web): IP 10.1.10.188
-- Cliente Linux (Agente SNMPd): IP 10.1.10.102 (Porta UDP 161)
-
-STATUS: Coleta SNMP ativa e operacional (Availability SNMP: Green).</description>
+STATUS: 100% Concluído e Validado via testes ICMP (Ping).</description>
   <topology>
     <nodes>
       <node id="1" name="Zabbix" type="qemu" template="linux" image="linux-zabbix" console="vnc" cpu="2" cpulimit="0" ram="2048" ethernet="1" uuid="0f6bd496-790c-44b4-9f9f-feced87bfe39" firstmac="00:50:00:00:01:00" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="Server-2D-Linux-S.svg" config="0" left="1062" top="393">
