@@ -1,6 +1,10 @@
 # 📊 Monitorização de Infraestrutura com Zabbix & SNMP
 
-## 🖼️ FOTO DA PAGINA INICIAL
+## 🖼️ FOTO TOPOLOGIA
+![TOPOLOGIA](./foto-zabbix-top.png)
+
+---
+## 🖼️ FOTO DA PAGINA INICIA
 ![PAGINA INICIAL](./foto-zabbix.png)
 
 ---
